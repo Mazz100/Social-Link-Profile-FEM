@@ -1,0 +1,108 @@
+//Variables
+$body-BG-color: hsl(0, 0%, 8%);
+$card-BG-color: hsl(0, 0%, 12%);
+$active-states-color: hsl(75, 94%, 57%);
+$links-color: hsl(0, 0%, 20%);
+@use 'reset';
+
+@mixin Flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    @include Flex(column);
+
+    background-color: $body-BG-color;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 21rem;
+    @include Flex(column);
+    flex: 1;
+
+}
+
+.main-card-wrapper {
+    @include Flex(column);
+
+    background-color: $card-BG-color;
+    color: white;
+    padding: 1em;
+    border-radius: 12px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.user-profile {
+    text-align: center;
+
+    .name-title {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom: 0.6em;
+    }
+
+    .location-title {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: $active-states-color;
+    }
+
+    .bio-description {
+        font-size: 0.75rem;
+        opacity: 0.7;
+        margin: 1.4em 1.4em;
+    }
+}
+
+.social-links {
+    display: block;
+    width: 100%;
+    background-color: $links-color;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5em;
+    margin-bottom: 0.8em;
+    border-radius: 8px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.social-links:hover {
+    background-color: $active-states-color;
+    color: black;
+}
+
+//Footer
+.attribution {
+    display: block;
+    width: 100%;
+    background-color: $card-BG-color;
+    font-size: 0.75rem;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.attribution a {
+    color: hsl(154, 68%, 60%);
+}
+
+.attribution a:hover {
+    text-decoration: none;
+
+}
+
+@media (min-width:50rem) {
+    .main-wrapper{
+        max-width: 26rem;
+    }
+}
