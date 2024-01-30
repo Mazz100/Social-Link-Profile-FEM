@@ -23,12 +23,10 @@ body {
     max-width: 21rem;
     @include Flex(column);
     flex: 1;
-
 }
 
 .main-card-wrapper {
     @include Flex(column);
-
     background-color: $card-BG-color;
     color: white;
     padding: 1em;
@@ -39,6 +37,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 1em;
+   
 }
 
 .user-profile {
@@ -73,7 +72,7 @@ body {
     padding: 0.5em;
     margin-bottom: 0.8em;
     border-radius: 8px;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.3s ease, color 0.5s ease;
 }
 
 .social-links:hover {
@@ -93,16 +92,9 @@ body {
 }
 
 .attribution a {
-    color: hsl(154, 68%, 60%);
+    color: hsl(156, 84%, 64%);
 }
 
 .attribution a:hover {
     text-decoration: none;
-
-}
-
-@media (min-width:50rem) {
-    .main-wrapper{
-        max-width: 26rem;
-    }
 }
